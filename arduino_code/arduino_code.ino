@@ -57,6 +57,8 @@ void setup() {
 
 void loop() {
   Start();
+
+  //press enter
   Keyboard.press(176);
   Keyboard.release(176);
   
@@ -68,8 +70,34 @@ void loop() {
   startD = false;
   
   Start();
+
+  //press space
   Keyboard.press(32);
   Keyboard.release(32);
+
+  while(timer < 3000) {
+    DebounceA();
+    DebounceB();
+    DebounceC();
+    DebounceD();
+    delay(10);
+    timer += 1;
+  }
+
+  // press 1
+  Keyboard.press(49);
+  Keyboard.release(49);
+  
+  startA = false;
+  startB = false;
+  startC = false;
+  startD = false;
+  
+  Start();
+
+  Keyboard.press(50);
+  Keyboard.release(50);
+  
 
   while(timer < 6000) {
     DebounceA();

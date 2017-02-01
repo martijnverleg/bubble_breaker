@@ -63,13 +63,6 @@ void Start() {
       digitalWrite(L4, LOW);
     }
 
-    Serial.print(startA);
-    Serial.print(", ");
-    Serial.print(startB);
-    Serial.print(", ");
-    Serial.print(startC);
-    Serial.print(", ");
-    Serial.println(startD);
     blinkTimer++;
     delay(10); 
   }

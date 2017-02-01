@@ -83,8 +83,24 @@ $(document).ready(function() {
 			$('#intro').hide();
 			$('#game').show();
 			$('.a, .b, .c, .d').show();
-			
 			$('.background').fadeIn(30000);
 		};
+
+		if(e.which == 49) {
+			game = false;
+			$('#start').hide();
+			$('#intro').show();
+			$('.top_text, .bottom_text').html("Tel nu alle berichten die niet van je vrienden afkomstig zijn.");
+			$('.a, .b, .c, .d').show();
+			$('#game').hide();
+		}
+
+		if(e.which == 50) {
+			$('#start').hide();
+			$('#intro').hide();
+			$('#game').show();
+			$('.a, .b, .c, .d').show();
+			$('.background').fadeIn(30000);
+		}
 	});
 });

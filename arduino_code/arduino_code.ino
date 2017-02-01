@@ -60,7 +60,7 @@ void loop() {
   Keyboard.press(176);
   Keyboard.release(176);
   
-  BlinkAll(L1, L2, L3, L4, 500);
+  BlinkAll(L1, L2, L3, L4, 100, 5);
   
   startA = false;
   startB = false;

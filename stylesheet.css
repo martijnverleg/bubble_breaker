@@ -1,0 +1,95 @@
+body {
+	width: 100%;
+	margin: 0;
+	top: 0;
+}
+
+.wrapper {
+	width: 1024px;
+	height: 600px;
+	background-color: #F1F7ED;
+	float: left;
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+
+.top {
+	width: 100%;
+	height: 100px;
+}
+
+.left {
+	width: 50%;
+	height: 400px;
+	float: left;
+}
+
+.right {
+	width: 50%;
+	height: 400px;
+	float: right;
+
+}
+
+.bottom {
+	clear: both;
+	width: 100%;
+	height: 100px;
+}
+
+.text {
+	text-align: left;
+	font-family: 'Pathway Gothic One', sans-serif;
+	font-size: 24px;
+}
+
+p {
+	text-align: center;
+}
+
+.a {
+	transform: rotate(180deg) translateY(-50%);
+}
+
+.b{
+	transform: rotate(90deg) translateY(-50%);
+}
+
+.c {
+	transform: rotate(270deg) translateY(-50%);
+}
+
+.d {
+	transform: rotate(0deg) translateY(-50%);
+}
+
+.rotate {
+	transform: rotate(-30.5deg);
+}
+
+.top_text {
+	transform: rotate(180deg);
+	width: 800px;
+}
+
+.bottom_text {
+	width: 800px;
+	margin-top: 25px;
+	border-top: solid 2px black;
+	padding-top: 25px;
+}
+
+.instructions {
+	float: left;
+	width: 250px;
+}
+
+.instructions p {
+	text-align: left;
+	padding-left: 40px;
+}

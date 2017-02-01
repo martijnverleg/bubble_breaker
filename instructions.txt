@@ -1,0 +1,3 @@
+Paste in terminal:
+
+/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --app=file:///Users/MartijnVerleg/Google%20Drive/Afstuderen/Bubble_Breaker/prototype5/application/webpage.html

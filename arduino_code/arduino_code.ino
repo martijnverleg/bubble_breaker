@@ -56,9 +56,13 @@ void setup() {
 }
 
 void loop() {
+
+  // startscreen
   Start();
 
-  //press enter
+  // uitleg part 1
+  // press enter
+  Serial.println("ENTER");
   Keyboard.press(176);
   Keyboard.release(176);
   
@@ -70,11 +74,47 @@ void loop() {
   startD = false;
   
   Start();
-
-  //press space
+  
+  // press space
+  Serial.println("SPACE");
   Keyboard.press(32);
   Keyboard.release(32);
 
+  BlinkAll(L1, L2, L3, L4, 100, 5);
+
+  // start game part1
+  while(timer < 3000) {
+    DebounceA();
+    DebounceB();
+    DebounceC();
+    DebounceD();
+    delay(10);
+    timer += 1;
+  }
+  
+  BlinkAll(L1, L2, L3, L4, 500, 3);
+  
+  // uitleg part 2
+  // press 1
+  Serial.println("1");
+  Keyboard.press(49);
+  Keyboard.release(49);
+
+  startA = false;
+  startB = false;
+  startC = false;
+  startD = false;
+  
+  Start();
+  
+  // press 2
+  Serial.println("2");
+  Keyboard.press(50);
+  Keyboard.release(50);
+  
+  timer = 0;
+ 
+  // start game part2
   while(timer < 3000) {
     DebounceA();
     DebounceB();
@@ -84,10 +124,14 @@ void loop() {
     timer += 1;
   }
 
-  // press 1
-  Keyboard.press(49);
-  Keyboard.release(49);
+  BlinkAll(L1, L2, L3, L4, 500, 3);
   
+  // uitleg part 3
+  // press 3
+  Serial.println("3");
+  Keyboard.press(51);
+  Keyboard.release(51);
+
   startA = false;
   startB = false;
   startC = false;
@@ -95,11 +139,15 @@ void loop() {
   
   Start();
 
-  Keyboard.press(50);
-  Keyboard.release(50);
+  // press 4
+  Serial.println("4");
+  Keyboard.press(52);
+  Keyboard.release(52);
   
-
-  while(timer < 6000) {
+  timer = 0;
+  
+  // start game part 3
+  while(timer < 3000) {
     DebounceA();
     DebounceB();
     DebounceC();
@@ -107,5 +155,16 @@ void loop() {
     delay(10);
     timer += 1;
   }
+
+  BlinkAll(L1, L2, L3, L4, 500, 3);
   
+  // press 0
+  // start ending
+  Serial.println("0");
+  Keyboard.press(48);
+  Keyboard.release(48);
+  
+  while(true) {
+    delay(100);
+  }
 }
